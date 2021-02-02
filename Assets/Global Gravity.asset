@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c35cf50397585e45874398c09e6d861, type: 3}
   m_Name: Global Gravity
   m_EditorClassIdentifier: 
-  m_gravity: 1.5
+  m_gravity: 2

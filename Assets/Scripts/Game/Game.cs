@@ -35,5 +35,10 @@ namespace DJ2
                 enemy.Respawn();
             }
         }
+
+        public void SetCheckpoint(Transform checkpoint)
+        {
+            m_player.setCheckpoint(checkpoint.position);
+        }
     }
 }

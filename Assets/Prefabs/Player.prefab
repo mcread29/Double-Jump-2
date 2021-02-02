@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfae3a138ad32148b88537fa8b1f19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 14
-  m_speed: 10
+  m_JumpForce: 12
+  m_speed: 7
   m_MovementSmoothing: 0.05
   m_WhatIsGround:
     serializedVersion: 2
@@ -119,7 +119,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   m_gravity: {fileID: 11400000, guid: 7e43b800c8e3ec044aeb4f3b398219be, type: 2}
-  maxJumps: 2
+  maxJumps: 1
   left: 0
   right: 0
   OnLandEvent:

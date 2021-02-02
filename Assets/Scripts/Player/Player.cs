@@ -39,6 +39,11 @@ namespace DJ2
             m_controller2D.Move(x);
         }
 
+        public void setCheckpoint(Vector3 position)
+        {
+            m_respawnPos = position;
+        }
+
         public void Respawn()
         {
             transform.position = m_respawnPos;

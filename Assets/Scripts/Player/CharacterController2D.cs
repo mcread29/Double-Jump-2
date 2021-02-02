@@ -144,6 +144,7 @@ namespace DJ2
 
         private void OnCollisionEnter2D(Collision2D other)
         {
+            Debug.Log(other.gameObject.tag);
             if (other.gameObject.tag == "Enemy")
             {
                 Debug.Log(other.gameObject.name);
@@ -159,6 +160,10 @@ namespace DJ2
                 {
                     Game.Instance.Respawn();
                 }
+            }
+            else if (other.gameObject.tag == "KillBox")
+            {
+                Game.Instance.Respawn();
             }
         }
     }
