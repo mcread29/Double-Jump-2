@@ -20,7 +20,14 @@ namespace DJ2
         private Rigidbody2D m_Rigidbody2D;
         private BoxCollider2D m_Collider2D;
 
-        public int maxJumps = 2;
+        [SerializeField] private int m_maxJumps = 0;
+        public int maxJumps
+        {
+            get
+            {
+                return m_maxJumps;
+            }
+        }
         private int m_numJumps;
 
         private bool m_jump = false;
@@ -51,7 +58,9 @@ namespace DJ2
             if (OnLandEvent == null)
                 OnLandEvent = new UnityEvent();
 
-            m_numJumps = maxJumps;
+
+            m_maxJumps = m_maxJumps == 0 ? SaveData.Instance.jumps : m_maxJumps;
+            m_numJumps = m_maxJumps;
         }
 
         private void FixedUpdate()
@@ -76,7 +85,7 @@ namespace DJ2
                     targetVelocity.y = 0;
                     if (wasGrounded == false)
                         OnLandEvent.Invoke();
-                    m_numJumps = maxJumps;
+                    m_numJumps = m_maxJumps;
                 }
 
                 m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
@@ -144,26 +153,21 @@ namespace DJ2
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            Debug.Log(other.gameObject.tag);
             if (other.gameObject.tag == "Enemy")
             {
                 Debug.Log(other.gameObject.name);
 
-                bool collideTop = isCollidingWithWorld(m_centerX, m_minY, 0.5f, k_collisionRadius, m_WhatIsEnemy);
+                bool collideTop = isCollidingWithWorld(m_centerX, m_minY, 0.75f, k_collisionRadius, m_WhatIsEnemy);
                 if (collideTop)
                 {
                     m_jump = true;
-                    m_numJumps = maxJumps;
+                    m_numJumps = m_maxJumps;
                     other.gameObject.SetActive(false);
                 }
                 else
                 {
                     Game.Instance.Respawn();
                 }
-            }
-            else if (other.gameObject.tag == "KillBox")
-            {
-                Game.Instance.Respawn();
             }
         }
     }

@@ -13,7 +13,6 @@ namespace DJ2
         {
             if (other.gameObject.name == "Player")
             {
-                Debug.Log(m_scene);
                 SceneManager.LoadScene(m_scene);
             }
         }
