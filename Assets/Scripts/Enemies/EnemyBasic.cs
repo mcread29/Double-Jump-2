@@ -9,28 +9,35 @@ namespace DJ2
         [Header("Basic Enemy Stuff")]
         [SerializeField] private Transform m_leftBound;
         [SerializeField] private Transform m_rightBound;
+        [SerializeField] private LayerMask m_whatIsGround;
 
         private Vector3 m_Velocity = Vector3.zero;
 
         [SerializeField] private int m_move = 1;
-        private float m_speed = 8f;
-
-        private float m_minX { get { return m_Collider2D.bounds.min.x; } }
-        private float m_maxX { get { return m_Collider2D.bounds.max.x; } }
-        private float m_centerX { get { return m_Collider2D.bounds.center.x; } }
-
-        private float m_minY { get { return m_Collider2D.bounds.min.y; } }
-        private float m_maxY { get { return m_Collider2D.bounds.max.y; } }
-        private float m_centerY { get { return m_Collider2D.bounds.center.y; } }
+        public int Move
+        {
+            set
+            {
+                m_move = value;
+            }
+        }
+        private float m_speed = 6.5f;
 
         private void FixedUpdate()
         {
-            if (m_leftBound != null && m_minX - 0.25f < m_leftBound.position.x) m_move = 1;
-            if (m_rightBound != null && m_maxX + 0.25f > m_rightBound.position.x) m_move = -1;
+            if (m_Rigidbody2D)
+            {
+                bool collideLeft = isCollidingWithWorld(m_minX, m_centerY, 0.01f, 0.5f, m_whatIsGround);
+                bool collideRight = isCollidingWithWorld(m_maxX, m_centerY, 0.01f, 0.5f, m_whatIsGround);
 
-            Vector3 targetVelocity = new Vector2(m_move * m_speed, m_Rigidbody2D.velocity.y - m_gravityVelocity);
+                if (collideLeft || (m_leftBound != null && m_minX - 0.25f < m_leftBound.position.x)) m_move = 1;
+                if (collideRight || (m_rightBound != null && m_maxX + 0.25f > m_rightBound.position.x)) m_move = -1;
 
-            m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, .05f);
+                Vector3 targetVelocity = new Vector2(m_move * m_speed, m_Rigidbody2D.velocity.y - m_gravityVelocity);
+                // targetVelocity.y = Mathf.Max(targetVelocity.y, -30f);
+
+                m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, .05f);
+            }
         }
     }
 }

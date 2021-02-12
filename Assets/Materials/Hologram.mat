@@ -128,6 +128,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_2e159e0b33fc47d8899086a769b1a99c: 0.54
+    - Vector1_66bad91dd14c4225827976f85c189cde: 0.09
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -269,7 +271,7 @@ Material:
     - _HologramTiling: {r: 8, g: 8, b: 8, a: 8}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _MainColor: {r: 0.032075405, g: 1, b: 0.82263154, a: 1}
+    - _MainColor: {r: 0, g: 1, b: 0.875, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}

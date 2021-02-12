@@ -6,7 +6,7 @@ namespace DJ2
     public class CharacterController2D : MonoBehaviour
     {
         [SerializeField] private float m_JumpForce = 30f;
-        [SerializeField] private float m_speed = 10f;
+        [SerializeField] private float m_speed = 7f;
         [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
         [SerializeField] private LayerMask m_WhatIsGround;
         [SerializeField] private LayerMask m_WhatIsEnemy;
@@ -122,7 +122,6 @@ namespace DJ2
         {
             if (m_numJumps > 0 && m_jump == false)
             {
-                Debug.Log(m_numJumps);
                 m_numJumps--;
                 m_jump = true;
             }
@@ -141,7 +140,6 @@ namespace DJ2
             return isColliding;
         }
 
-
         private void Flip()
         {
             m_FacingRight = !m_FacingRight;
@@ -155,8 +153,6 @@ namespace DJ2
         {
             if (other.gameObject.tag == "Enemy")
             {
-                Debug.Log(other.gameObject.name);
-
                 bool collideTop = isCollidingWithWorld(m_centerX, m_minY, 0.75f, k_collisionRadius, m_WhatIsEnemy);
                 if (collideTop)
                 {

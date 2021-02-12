@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DJ2
 {
@@ -15,6 +13,16 @@ namespace DJ2
 
         private Vector3 m_startPosition;
 
+        protected float m_minX { get { return m_Collider2D.bounds.min.x; } }
+        protected float m_maxX { get { return m_Collider2D.bounds.max.x; } }
+        protected float m_centerX { get { return m_Collider2D.bounds.center.x; } }
+
+        protected float m_minY { get { return m_Collider2D.bounds.min.y; } }
+        protected float m_maxY { get { return m_Collider2D.bounds.max.y; } }
+        protected float m_centerY { get { return m_Collider2D.bounds.center.y; } }
+
+        public System.Action<GameObject> onRespawn;
+
         void Start()
         {
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -27,6 +35,20 @@ namespace DJ2
         {
             gameObject.SetActive(true);
             transform.position = m_startPosition;
+            if (onRespawn != null) onRespawn(gameObject);
+        }
+
+        protected bool isCollidingWithWorld(float x, float y, float width, float height, int layerMask)
+        {
+            bool isColliding = false;
+
+            Collider2D[] groundColliders = Physics2D.OverlapBoxAll(new Vector3(x, y, 0), new Vector2(width, height), 0, layerMask);
+            for (int i = 0; i < groundColliders.Length; i++)
+            {
+                isColliding = isColliding || groundColliders[i].gameObject != gameObject;
+            }
+
+            return isColliding;
         }
     }
 }

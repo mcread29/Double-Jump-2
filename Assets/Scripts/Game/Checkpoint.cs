@@ -8,7 +8,6 @@ namespace DJ2
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log(other.gameObject.name);
             Game.Instance.SetCheckpoint(transform);
         }
     }

@@ -21,7 +21,8 @@ namespace DJ2
                     SaveData.Instance.Save();
                 }
 
-                SceneManager.LoadScene("LevelSelect");
+                // SceneManager.LoadScene("LevelSelect");
+                SceneManager.LoadScene("Splash");
             }
         }
     }
