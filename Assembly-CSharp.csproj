@@ -49,10 +49,29 @@
      <Compile Include="Assets\Scripts\Enemies\EnemyBasic.cs" />
      <Compile Include="Assets\Scripts\Game\KillBox.cs" />
      <Compile Include="Assets\Scripts\SaveData.cs" />
+     <Compile Include="Assets\Scripts\Game\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Menu\LevelSelectPanel.cs" />
      <Compile Include="Assets\Scripts\Player\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\Game\Game.cs" />
      <Compile Include="Assets\Scripts\Gravity.cs" />
-     <Compile Include="Assets\Scripts\Menu\LevelSelectPanel.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonBeamStatic.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonEffectCycler.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonLoopScript.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonButtonScript.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonSceneSelect.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonLightFade.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonFireProjectile.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonSoundSpawn.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonOrbit.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonRotation.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonBeamScript.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonLightFlicker.cs" />
+     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonProjectileScript.cs" />
+     <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyRimLightSelective.shader" />
+     <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyRimLightSolid.shader" />
+     <None Include="Assets\Polygon Arsenal\Polygon Arsenal 2.0 - Documentation.txt" />
+     <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyRimLightTransparent.shader" />
+     <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyLitSurface.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

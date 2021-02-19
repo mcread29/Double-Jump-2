@@ -17,9 +17,13 @@ namespace DJ2
         {
             m_helpPanel.SetActive(show);
         }
-        public void StartLevel1()
+        public void StartLevel1_1()
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level1.1");
+        }
+        public void StartLevel1_2()
+        {
+            SceneManager.LoadScene("Level1.2");
         }
         public void StartLevel2_1()
         {

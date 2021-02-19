@@ -96,12 +96,12 @@ namespace DJ2
         {
             Vector3 targetVelocity = new Vector2(move * m_speed, m_Rigidbody2D.velocity.y);
 
-            if (isCollidingWithWorld(m_minX, m_centerY, k_collisionRadius, 0.5f, m_WhatIsGround))
+            if (isCollidingWithWorld(m_minX, m_centerY, k_collisionRadius, 0.85f, m_WhatIsGround))
             {
                 targetVelocity.x = Mathf.Max(0, targetVelocity.x);
             }
 
-            if (isCollidingWithWorld(m_maxX, m_centerY, k_collisionRadius, 0.5f, m_WhatIsGround))
+            if (isCollidingWithWorld(m_maxX, m_centerY, k_collisionRadius, 0.85f, m_WhatIsGround))
             {
                 targetVelocity.x = Mathf.Min(0, targetVelocity.x);
             }
