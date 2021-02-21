@@ -271,7 +271,7 @@ Material:
     - _HologramTiling: {r: 8, g: 8, b: 8, a: 8}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _MainColor: {r: 0, g: 1, b: 0.875, a: 1}
+    - _MainColor: {r: 0, g: 1, b: 0.8156863, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
