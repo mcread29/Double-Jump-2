@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_gravity: {fileID: 11400000, guid: 7e43b800c8e3ec044aeb4f3b398219be, type: 2}
+  m_destroyParticles: {fileID: 9140508301810488220, guid: 0e6ac7cf58b220f4ab5a63bb2248853d, type: 3}
+  m_destroyEffect: {fileID: 315790545005164817, guid: 2ede35bd63468064aad6d4a079602349, type: 3}
   m_leftBound: {fileID: 0}
   m_rightBound: {fileID: 0}
   m_whatIsGround:

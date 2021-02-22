@@ -158,7 +158,7 @@ namespace DJ2
                 {
                     m_jump = true;
                     m_numJumps = m_maxJumps;
-                    other.gameObject.SetActive(false);
+                    other.gameObject.GetComponent<Enemy>().Kill();
                 }
                 else
                 {

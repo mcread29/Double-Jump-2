@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.VFX;
 
 namespace DJ2
 {
@@ -7,6 +8,8 @@ namespace DJ2
         [SerializeField] private Gravity m_gravity;
         protected float m_gravityVelocity = 0;
 
+        [SerializeField] private ParticleSystem m_destroyParticles;
+        [SerializeField] private VisualEffect m_destroyEffect;
 
         protected Rigidbody2D m_Rigidbody2D;
         protected BoxCollider2D m_Collider2D;
@@ -36,6 +39,13 @@ namespace DJ2
             gameObject.SetActive(true);
             transform.position = m_startPosition;
             if (onRespawn != null) onRespawn(gameObject);
+        }
+
+        public void Kill()
+        {
+            // GameObject.Instantiate(m_destroyParticles.gameObject, transform.position, transform.rotation, transform.parent);
+            GameObject.Instantiate(m_destroyEffect.gameObject, transform.position, transform.rotation, transform.parent);
+            gameObject.SetActive(false);
         }
 
         protected bool isCollidingWithWorld(float x, float y, float width, float height, int layerMask)
