@@ -23,7 +23,7 @@ Material:
   m_Name: LavaEmissive
   m_Shader: {fileID: -6465566751694194690, guid: b0bfafb4e49566b43af3923a87c8b307, type: 3}
   m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2225

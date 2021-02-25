@@ -38,39 +38,132 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Game\Checkpoint.cs" />
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonEffectCycler.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\Vector4TweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\MaterialVectorTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\Vector3TweenProperty.cs" />
      <Compile Include="Assets\Scripts\LevelStart.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\OffsetMaxTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\enums\GoSplineType.cs" />
      <Compile Include="Assets\Scripts\Game\LevelEnd.cs" />
      <Compile Include="Assets\Scripts\Enemies\BasicEnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Player\CameraController.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\splines\GoSpline.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\base\AbstractGoTween.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\AnchoredPosition3DTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\PositionTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\smoothing\GoSmoothedQuaternion.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\enums\GoLookAtType.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\abstracts\AbstractVector3TweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\GoTweenCollectionConfig.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\smoothing\GoSmoothingType.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\Go.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\SimpleTween.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\extensions\GoKitTweenExtensions.cs" />
      <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonLightFade.cs" />
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonFireProjectile.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\abstracts\AbstractMaterialColorTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\OffsetMinTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\Vector2TweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\GoTweenChain.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\SizeDeltaTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\GoPathSettings.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\PivotTweenProperty.cs" />
      <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonSoundSpawn.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\BaseDemoGUI.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\IntTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\splines\GoSplineQuadraticBezierSolver.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseQuartic.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\abstracts\AbstractMaterialFloatTweenProperty.cs" />
      <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonLightFlicker.cs" />
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonProjectileScript.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseAnimationCurve.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\ScaleTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseExponential.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseCubic.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\Vector3ZTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\base\AbstractGoTweenCollection.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\IGenericProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseSinusoidal.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\enums\GoTweenState.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseLinear.cs" />
      <Compile Include="Assets\Scripts\Game\MovingKillBox.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseElastic.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\PathTweenGUI.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\MaterialColorTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseBack.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\enums\GoDuplicatePropertyRuleType.cs" />
      <Compile Include="Assets\Scripts\Game\ParticleSystemDestroy.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\enums\GoLogLevel.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\enums\GoLoopType.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\GoKitSplineTest.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\AnchoredPositionTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\abstracts\AbstractTweenProperty.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenuPanel.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\StressTestGUI.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\PositionPathTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\GoTweenConfig.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\abstracts\AbstractOffsetTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseBounce.cs" />
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonLoopScript.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\AnchorMaxTweenProperty.cs" />
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonSceneSelect.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\splines\GoSplineCatmullRomSolver.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\Vector3XTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\enums\GoEaseType.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\GoTweenFlow.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\MaterialFloatTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\RotationTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\GoDummyPath.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\ShakeTweenProperty.cs" />
      <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonBeamStatic.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\ScalePathTweenProperty.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyBasic.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\EulerAnglesTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\enums\GoShakeType.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\AnchorMinTweenProperty.cs" />
      <Compile Include="Assets\Scripts\Game\KillBox.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\ColorTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\splines\GoSplineCubicBezierSolver.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\FPSHUD.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\enums\GoUpdateType.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\FloatTweenProperty.cs" />
      <Compile Include="Assets\Scripts\SaveData.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\Vector3PathTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\specificTypes\RotationQuaternionTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\TweenChainGUI.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseQuadratic.cs" />
      <Compile Include="Assets\Scripts\Game\PauseMenu.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\Vector3YTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\splines\GoSplineStraightLineSolver.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\UnityGUITween.cs" />
      <Compile Include="Assets\Scripts\Menu\LevelSelectPanel.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\smoothing\GoSmoothedVector3.cs" />
      <Compile Include="Assets\Scripts\Player\CharacterController2D.cs" />
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonButtonScript.cs" />
      <Compile Include="Assets\Scripts\Game\Game.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\abstracts\AbstractQuaternionTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\TweenFlowGUI.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\abstracts\AbstractMaterialVectorTweenProperty.cs" />
+     <Compile Include="Assets\GoKit\Assets\Demo\scripts\ShakeVariantsGUI.cs" />
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonOrbit.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseQuintic.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\splines\AbstractGoSplineSolver.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\easing\GoEaseCircular.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\GoProxyProp.cs" />
      <Compile Include="Assets\Scripts\Gravity.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\genericTypes\ActionTweenProperty.cs" />
      <Compile Include="Assets\Polygon Arsenal\Scripts\PolygonRotation.cs" />
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonBeamScript.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\GoTweenUtils.cs" />
+     <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\GoTween.cs" />
      <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyRimLightSelective.shader" />
      <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyRimLightSolid.shader" />
+     <None Include="Assets\GoKit\ProjectSettings\ProjectVersion.txt" />
      <None Include="Assets\Polygon Arsenal\Polygon Arsenal 2.0 - Documentation.txt" />
+     <None Include="Assets\GoKit\Assets\Plugins\GoKit\easing\easeEquationsLicense.txt" />
      <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyRimLightTransparent.shader" />
      <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyLitSurface.shader" />
     <Reference Include="UnityEngine">
@@ -646,6 +739,9 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -658,14 +754,29 @@
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ProBuilder">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
+        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.Editor">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
@@ -676,6 +787,9 @@
     <Reference Include="Unity.Rider.Editor">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -685,44 +799,23 @@
     <Reference Include="Unity.Polybrush">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.Polybrush.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Editor">
-        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Runtime">
-        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
-        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
-        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
         <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-        <HintPath>L:/Unity/DJ2/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

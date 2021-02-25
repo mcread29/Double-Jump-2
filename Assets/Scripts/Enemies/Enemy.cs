@@ -9,7 +9,6 @@ namespace DJ2
         protected float m_gravityVelocity = 0;
 
         [SerializeField] private ParticleSystem m_destroyParticles;
-        [SerializeField] private VisualEffect m_destroyEffect;
 
         protected Rigidbody2D m_Rigidbody2D;
         protected BoxCollider2D m_Collider2D;
@@ -43,8 +42,7 @@ namespace DJ2
 
         public void Kill()
         {
-            // GameObject.Instantiate(m_destroyParticles.gameObject, transform.position, transform.rotation, transform.parent);
-            GameObject.Instantiate(m_destroyEffect.gameObject, transform.position, transform.rotation, transform.parent);
+            GameObject.Instantiate(m_destroyParticles.gameObject, transform.position, transform.rotation, transform.parent);
             gameObject.SetActive(false);
         }
 

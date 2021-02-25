@@ -20,6 +20,8 @@ namespace DJ2
         private Rigidbody2D m_Rigidbody2D;
         private BoxCollider2D m_Collider2D;
 
+        private bool m_locked = false;
+
         [SerializeField] private int m_maxJumps = 0;
         public int maxJumps
         {
@@ -65,6 +67,8 @@ namespace DJ2
 
         private void FixedUpdate()
         {
+            if (m_locked) return;
+
             Vector3 targetVelocity = m_Rigidbody2D.velocity;
 
             bool wasGrounded = m_Grounded;
@@ -94,6 +98,8 @@ namespace DJ2
 
         public void Move(float move)
         {
+            if (m_locked) return;
+
             Vector3 targetVelocity = new Vector2(move * m_speed, m_Rigidbody2D.velocity.y);
 
             if (isCollidingWithWorld(m_minX, m_centerY, k_collisionRadius, 0.85f, m_WhatIsGround))
@@ -116,6 +122,12 @@ namespace DJ2
             }
 
             m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+        }
+
+        public void Lock()
+        {
+            m_locked = true;
+            m_Rigidbody2D.velocity = Vector3.zero;
         }
 
         public void Jump()
