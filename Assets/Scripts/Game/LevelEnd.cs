@@ -7,8 +7,6 @@ namespace DJ2
 {
     public class LevelEnd : MonoBehaviour
     {
-
-        [SerializeField] private bool m_doubleJumps;
         [SerializeField] private ParticleSystem m_particles;
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -16,11 +14,8 @@ namespace DJ2
             CharacterController2D controller = other.GetComponent<CharacterController2D>();
             if (controller != null)
             {
-                if (m_doubleJumps && controller.maxJumps == SaveData.Instance.jumps)
-                {
-                    SaveData.Instance.jumps *= 2;
-                    SaveData.Instance.Save();
-                }
+                Save.Instance.levelsComplete.Add(SceneManager.GetActiveScene().name);
+                Save.Instance.SaveData();
 
                 controller.Lock();
 
@@ -40,9 +35,7 @@ namespace DJ2
         private IEnumerator goToLevelSelect(ParticleSystem particles)
         {
             while (particles.IsAlive()) yield return null;
-
-            // SceneManager.LoadScene("LevelSelect");
-            SceneManager.LoadScene("Splash");
+            SceneManager.LoadScene("LevelSelect");
         }
     }
 }

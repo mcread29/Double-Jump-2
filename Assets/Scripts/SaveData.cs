@@ -4,28 +4,49 @@ using UnityEngine;
 
 namespace DJ2
 {
-    public class SaveData
+    [System.Serializable]
+    class SaveData
     {
-        private static SaveData m_instance;
-        public static SaveData Instance
+        string[] levelsComplete;
+    }
+
+    public class Save
+    {
+        private static Save m_instance;
+        public static Save Instance
         {
             get
             {
-                if (m_instance == null) m_instance = new SaveData();
+                if (m_instance == null) m_instance = new Save();
                 return m_instance;
             }
         }
 
-        public int jumps;
-
-        SaveData()
+        public HashSet<string> levelsComplete;
+        public int jumps
         {
-            this.jumps = PlayerPrefs.GetInt("SaveData_Jumps", 1);
+            get
+            {
+                return levelsComplete.Count / 2 + 1;
+            }
         }
 
-        public void Save()
+        Save()
         {
-            PlayerPrefs.SetInt("SaveData_Jumps", this.jumps);
+            string s = PlayerPrefs.GetString("SaveData_LevelsComplete", "{}");
+            Debug.Log(s);
+
+            this.levelsComplete = new HashSet<string>(s.Split('|'));
+        }
+
+        public void SaveData()
+        {
+            string[] stringArray = new string[levelsComplete.Count];
+            levelsComplete.CopyTo(stringArray);
+            string json = string.Join("|", levelsComplete);
+
+            PlayerPrefs.SetString("SaveData_LevelsComplete", json);
+            PlayerPrefs.Save();
         }
 
     }

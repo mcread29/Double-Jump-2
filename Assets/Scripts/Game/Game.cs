@@ -26,7 +26,6 @@ namespace DJ2
             m_instance = this;
             m_player = FindObjectOfType<Player>();
             m_enemies = FindObjectsOfType<Enemy>();
-            Debug.Log(m_enemies.Length);
         }
 
         private void Update()

@@ -61,7 +61,7 @@ namespace DJ2
                 OnLandEvent = new UnityEvent();
 
 
-            m_maxJumps = m_maxJumps == 0 ? SaveData.Instance.jumps : m_maxJumps;
+            m_maxJumps = m_maxJumps == 0 ? Save.Instance.jumps : m_maxJumps;
             m_numJumps = m_maxJumps;
         }
 
