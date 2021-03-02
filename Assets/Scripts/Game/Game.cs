@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DJ2
 {
@@ -18,8 +19,10 @@ namespace DJ2
 
         private Enemy[] m_enemies;
         private Player m_player;
+        public Player Player { get { return m_player; } }
 
         [SerializeField] private PauseMenu m_pauseMenu;
+        [SerializeField] private InGamePause m_inGamePauseMenu;
 
         private void Awake()
         {
@@ -53,13 +56,17 @@ namespace DJ2
         private void pause()
         {
             Time.timeScale = 0;
-            m_pauseMenu.gameObject.SetActive(true);
+            if (SceneManager.GetActiveScene().name == "LevelSelect")
+                m_pauseMenu.gameObject.SetActive(true);
+            else
+                m_inGamePauseMenu.gameObject.SetActive(true);
         }
 
         public void Resume()
         {
             Time.timeScale = 1;
             m_pauseMenu.gameObject.SetActive(false);
+            m_inGamePauseMenu.gameObject.SetActive(false);
         }
     }
 }

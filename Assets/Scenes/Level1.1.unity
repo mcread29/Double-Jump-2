@@ -4561,6 +4561,10 @@ PrefabInstance:
       propertyPath: m_maxJumps
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5589897186608941932, guid: e40548134127de6489bbf615821df782, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6320434067790717750, guid: e40548134127de6489bbf615821df782, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -5,47 +5,80 @@ using UnityEngine;
 namespace DJ2
 {
     [System.Serializable]
-    class SaveData
-    {
-        string[] levelsComplete;
-    }
-
     public class Save
     {
-        private static Save m_instance;
-        public static Save Instance
+        public string levelsFinished;
+        public bool seenCredits;
+        public bool seenTutorial;
+
+        public Save()
+        {
+            levelsFinished = "";
+            seenCredits = false;
+            seenTutorial = false;
+        }
+    }
+
+    public class SaveData
+    {
+        private static SaveData m_instance;
+        public static SaveData Instance
         {
             get
             {
-                if (m_instance == null) m_instance = new Save();
+                if (m_instance == null) m_instance = new SaveData();
                 return m_instance;
             }
         }
 
-        public HashSet<string> levelsComplete;
+        Save save;
+
+        public HashSet<string> levelsFinished;
+        public Dictionary<string, float> finishTimes;
+
+        public bool seenCredits
+        {
+            get { return save.seenCredits; }
+            set { save.seenCredits = value; }
+        }
+
+        public bool seenTutorial
+        {
+            get { return save.seenTutorial; }
+            set { save.seenTutorial = value; }
+        }
+
         public int jumps
         {
-            get
+            get { return (int)Mathf.Pow(2, (int)Mathf.Floor(levelsFinished.Count / 2)); }
+        }
+
+        SaveData()
+        {
+            string s = PlayerPrefs.GetString("DJ2_SaveData");
+
+            save = JsonUtility.FromJson<Save>(s);
+            if (save == null) save = new Save();
+
+            if (save.levelsFinished == "") this.levelsFinished = new HashSet<string>();
+            else this.levelsFinished = new HashSet<string>(save.levelsFinished.Split('|'));
+
+            foreach (string level in this.levelsFinished)
             {
-                return levelsComplete.Count / 2 + 1;
+                Debug.Log("FINISHED: " + level);
             }
+            Debug.Log(this.levelsFinished.Count);
+
+            this.finishTimes = new Dictionary<string, float>();
         }
 
-        Save()
+        public void Save()
         {
-            string s = PlayerPrefs.GetString("SaveData_LevelsComplete", "{}");
-            Debug.Log(s);
+            save.levelsFinished = string.Join("|", levelsFinished);
+            // string v = string.Join("|", finishTimes);
+            Debug.Log(save.levelsFinished);
 
-            this.levelsComplete = new HashSet<string>(s.Split('|'));
-        }
-
-        public void SaveData()
-        {
-            string[] stringArray = new string[levelsComplete.Count];
-            levelsComplete.CopyTo(stringArray);
-            string json = string.Join("|", levelsComplete);
-
-            PlayerPrefs.SetString("SaveData_LevelsComplete", json);
+            PlayerPrefs.SetString("DJ2_SaveData", JsonUtility.ToJson(save));
             PlayerPrefs.Save();
         }
 

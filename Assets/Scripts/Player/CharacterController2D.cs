@@ -52,6 +52,9 @@ namespace DJ2
         private float m_maxY { get { return m_Collider2D.bounds.max.y; } }
         private float m_centerY { get { return m_Collider2D.bounds.center.y; } }
 
+        public System.Action jumpAction;
+        public System.Action killAction;
+
         private void Awake()
         {
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -61,7 +64,7 @@ namespace DJ2
                 OnLandEvent = new UnityEvent();
 
 
-            m_maxJumps = m_maxJumps == 0 ? Save.Instance.jumps : m_maxJumps;
+            m_maxJumps = m_maxJumps == 0 ? SaveData.Instance.jumps : m_maxJumps;
             m_numJumps = m_maxJumps;
         }
 
@@ -124,10 +127,14 @@ namespace DJ2
             m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
         }
 
-        public void Lock()
+        public void Lock(bool l = true)
         {
-            m_locked = true;
+            m_locked = l;
+            // if (l)
+            // {
             m_Rigidbody2D.velocity = Vector3.zero;
+            m_jump = false;
+            // }
         }
 
         public void Jump()
@@ -136,6 +143,8 @@ namespace DJ2
             {
                 m_numJumps--;
                 m_jump = true;
+
+                if (jumpAction != null) jumpAction();
             }
         }
 
@@ -171,6 +180,7 @@ namespace DJ2
                     m_jump = true;
                     m_numJumps = m_maxJumps;
                     other.gameObject.GetComponent<Enemy>().Kill();
+                    if (killAction != null) killAction();
                 }
                 else
                 {

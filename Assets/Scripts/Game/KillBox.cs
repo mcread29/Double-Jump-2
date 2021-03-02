@@ -9,7 +9,7 @@ namespace DJ2
         private void Awake()
         {
             MaterialPropertyBlock props = new MaterialPropertyBlock();
-            props.SetFloat("Vector1_B8D26E2F", Random.Range(-0.03f, 0.03f));
+            props.SetFloat("_TimeOffset", Random.Range(-0.03f, 0.03f));
 
             MeshRenderer rend = GetComponent<MeshRenderer>();
             rend.SetPropertyBlock(props);

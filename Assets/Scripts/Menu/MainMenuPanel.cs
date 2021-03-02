@@ -12,7 +12,7 @@ namespace DJ2
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                SceneManager.LoadScene("LevelSelect");
+                ScreenTransition.To("LevelSelect");
             }
         }
 
