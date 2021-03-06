@@ -154,6 +154,7 @@
      <Compile Include="Assets\Scripts\Game\Game.cs" />
      <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\abstracts\AbstractQuaternionTweenProperty.cs" />
      <Compile Include="Assets\GoKit\Assets\Demo\scripts\TweenFlowGUI.cs" />
+     <Compile Include="Assets\Scripts\Menu\Splash.cs" />
      <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\abstracts\AbstractMaterialVectorTweenProperty.cs" />
      <Compile Include="Assets\GoKit\Assets\Demo\scripts\ShakeVariantsGUI.cs" />
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonOrbit.cs" />
@@ -167,7 +168,6 @@
      <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonBeamScript.cs" />
      <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\properties\GoTweenUtils.cs" />
      <Compile Include="Assets\GoKit\Assets\Plugins\GoKit\GoTween.cs" />
-     <Compile Include="Assets\Scripts\Menu\Splash.cs" />
      <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyRimLightSelective.shader" />
      <None Include="Assets\Polygon Arsenal\Shaders\Standard\PolyRimLightSolid.shader" />
      <None Include="Assets\GoKit\ProjectSettings\ProjectVersion.txt" />

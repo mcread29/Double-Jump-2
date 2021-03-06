@@ -10068,11 +10068,11 @@ PrefabInstance:
       objectReference: {fileID: 1540611568}
     - target: {fileID: 7925073980650040198, guid: 75ef878b922289247bab0cf709588f0a, type: 3}
       propertyPath: m_Size.x
-      value: 0.80000025
+      value: 0.7000003
       objectReference: {fileID: 0}
     - target: {fileID: 7925073980650040198, guid: 75ef878b922289247bab0cf709588f0a, type: 3}
       propertyPath: m_Offset.x
-      value: 0.65
+      value: 0.59999996
       objectReference: {fileID: 0}
     - target: {fileID: 8403088849981667831, guid: 75ef878b922289247bab0cf709588f0a, type: 3}
       propertyPath: m_Name
@@ -10172,7 +10172,6 @@ GameObject:
   - component: {fileID: 810774243}
   - component: {fileID: 810774242}
   - component: {fileID: 810774241}
-  - component: {fileID: 810774240}
   m_Layer: 0
   m_Name: KillBox.3
   m_TagString: KillBox
@@ -10194,32 +10193,6 @@ Transform:
   m_Father: {fileID: 2069313736}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &810774240
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810774238}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.34999993, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.20000009, y: 0.1}
-  m_EdgeRadius: 0
 --- !u!114 &810774241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17012,7 +16985,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-208712
+  m_Name: pb_Mesh-48098
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20956,7 +20929,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh204140
+  m_Name: pb_Mesh61338
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
